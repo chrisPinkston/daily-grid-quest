@@ -1,12 +1,12 @@
 name: Build & Publish to gh-pages
 
-permissions:
-  contents: write
-
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: write  # needed to push to gh-pages
 
 jobs:
   build-deploy:
@@ -19,12 +19,12 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - run: cp dist/index.html dist/404.html  # SPA fallback
+      - run: cp dist/index.html dist/404.html
       - run: touch dist/.nojekyll
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: ./dist
+          publish_branch: gh-pages
           force_orphan: true
