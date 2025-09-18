@@ -4,7 +4,7 @@
 
 **URL**: https://lovable.dev/projects/6bfe4270-7ef5-4ec8-a6d1-2bda6c2ac470
 
-## How can I edit this code?
+## How can I defeat NYT cross word?
 
 There are several ways of editing your application.
 
