@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Crossword-specific colors
+        grid: {
+          background: "hsl(var(--grid-background))",
+          border: "hsl(var(--grid-border))",
+          black: "hsl(var(--grid-black))",
+          selected: "hsl(var(--grid-selected))",
+          highlight: "hsl(var(--grid-highlight))",
+          number: "hsl(var(--grid-number))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
